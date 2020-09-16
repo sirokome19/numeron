@@ -12,7 +12,10 @@
       <button v-on:click="attack">attack</button>
     </form>
     <h3 class="log">Attack log</h3>
-    <li v-for="suggest in suggests_log">{{suggest.item}}: {{suggest.eat}} EAT, {{suggest.bite}} BITE</li>
+    <li
+      v-for="(suggest,key) in suggests_log"
+      :key="key"
+    >{{suggest.item}}: {{suggest.eat}} EAT, {{suggest.bite}} BITE</li>
   </div>
 </template>
 
